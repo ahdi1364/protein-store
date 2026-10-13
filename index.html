@@ -1,6 +1,218 @@
 <!doctype html>
-<html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7f5f1"><meta name="description" content="فروشگاه پروتئین ایلیا؛ تازه‌ترین محصولات لبنی، پروتئینی و مواد غذایی."><title>پروتئین ایلیا | خرید محصولات غذایی</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f5f1">
+<meta name="description" content="فروشگاه پروتئین ایلیا؛ تازه‌ترین محصولات لبنی، پروتئینی و مواد غذایی.">
+<title>پروتئین ایلیا | خرید محصولات غذایی</title>
 <style>
-:root{color-scheme:light;--clr-bg:oklch(97.5% .008 75);--clr-surface:oklch(99% .004 80);--clr-raised:oklch(100% .002 80);--clr-border:oklch(88% .012 75);--clr-muted:oklch(48% .018 65);--clr-body:oklch(31% .018 55);--clr-heading:oklch(23% .025 48);--clr-accent:oklch(67% .17 52);--clr-accent-strong:oklch(49% .15 48);--clr-accent-soft:oklch(93% .055 75);--clr-success:oklch(47% .12 150);--clr-danger:oklch(49% .17 25);--shadow:0 12px 36px oklch(25% .025 55 / .09);--space-1:8px;--space-2:16px;--space-3:24px;--space-4:32px;--space-5:40px;--space-6:48px;--space-7:56px;--space-8:64px;--radius-sm:12px;--radius-md:20px;--radius-lg:28px;font-family:'Vazirmatn',Tahoma,sans-serif}
-@media(prefers-color-scheme:dark){:root{color-scheme:dark;--clr-bg:oklch(19% .012 60);--clr-surface:oklch(23% .014 60);--clr-raised:oklch(27% .016 60);--clr-border:oklch(37% .018 60);--clr-muted:oklch(72% .018 70);--clr-body:oklch(86% .012 75);--clr-heading:oklch(94% .01 80);--clr-accent:oklch(77% .15 66);--clr-accent-strong:oklch(83% .13 72);--clr-accent-soft:oklch(32% .06 55);--clr-success:oklch(75% .13 150);--clr-danger:oklch(75% .16 25);--shadow:0 16px 40px oklch(5% .02 60 / .35)}}
-*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:96px}body{margin:0;background:var(--clr-bg);color:var(--clr-body);line-height:1.8}button{font:inherit}button:focus-visible,a:focus-visible{outline:3px solid var(--clr-accent);outline-offset:3px}.container{width:min(1160px,calc(100% - 32px));margin-inline:auto}.site-header{position:sticky;inset-block-start:0;z-index:20;background:color-mix(in oklch,var(--clr-bg) 90%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--clr-border)}.header-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:inline-flex;align-items:center;gap:12px;color:var(--clr-heading);text-decoration:none;font-weight:800;font-size:1.12rem;white-space:nowrap}.brand-mark{display:grid;place-items:center;width:44px;height:44px;border-radius:15px;background:var(--clr-accent);color:oklch(20% .03 50);font-size:1.35rem}.header-note{color:var(--clr-muted);font-size:.88rem;display:none}.icon-button{position:relative;width:48px;height:48px;display:grid;place-items:center;border:1px solid var(--clr-border);border-radius:16px;background:var(--clr-surface);color:var(--clr-heading);cursor:pointer;transition:background
+  :root {
+    --bg: #f7f5f1;
+    --card: #ffffff;
+    --text: #222;
+    --muted: #777;
+    --accent: #e0662b;
+    --accent-dark: #c4511a;
+    --border: #e6e2da;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+  }
+  header {
+    background: var(--accent);
+    color: #fff;
+    padding: 18px 16px 14px;
+    text-align: center;
+  }
+  header h1 { margin: 0; font-size: 22px; }
+  header p { margin: 4px 0 0; font-size: 14px; opacity: .95; }
+  .search-wrap { padding: 14px 16px 6px; }
+  #search {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+    font-family: inherit;
+  }
+  .cats {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 8px 16px 12px;
+    scrollbar-width: none;
+  }
+  .cats button {
+    flex: 0 0 auto;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .cats button.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  main { padding: 4px 16px 40px; }
+  .group { margin-bottom: 22px; }
+  .group h2 {
+    font-size: 17px;
+    margin: 10px 0;
+    color: var(--accent-dark);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 10px;
+    text-align: center;
+    font-size: 15px;
+  }
+  .item .price {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .note {
+    text-align: center;
+    background: #fff;
+    border: 1px dashed var(--accent);
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  .order {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    border-top: 1px solid var(--border);
+    padding: 12px 16px;
+    text-align: center;
+  }
+  .order a {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  .hidden { display: none !important; }
+  @media (min-width: 700px) {
+    .grid { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>پروتئین ایلیا</h1>
+  <p>تازه‌ترین محصولات لبنی، پروتئینی و مواد غذایی</p>
+</header>
+
+<div class="search-wrap">
+  <input id="search" type="search" placeholder="جستجوی محصول... (مثلاً: شیر، پنیر، ماست)">
+</div>
+
+<div class="cats" id="cats"></div>
+
+<main id="list"></main>
+
+<div class="order">
+  <a id="orderBtn" href="#">سفارش از طریق تماس</a>
+</div>
+
+<script>
+  // ===== تنظیمات: بعداً این دو مورد را عوض کنید =====
+  const PHONE = "09000000000";       // شماره تماس
+  const ORDER_LINK = "tel:" + PHONE; // بعداً می‌توانید به لینک واتساپ یا تلگرام تغییر دهید
+
+  // ===== لیست محصولات (قیمت‌ها بعداً اضافه می‌شوند) =====
+  const DATA = [
+    { cat: "لبنیات", items: ["شیر", "ماست", "پنیر", "خامه"] },
+    { cat: "سوسیس و فرآوری", items: ["سوسیس", "کالباس", "ناگت", "شنسل"] },
+    { cat: "پیتزا و فست‌فود", items: ["خمیر پیتزا", "پنیر پیتزا", "همبرگر"] },
+    { cat: "نوشیدنی", items: ["نوشابه", "دلستر", "آب‌میوه", "آب معدنی"] },
+    { cat: "دسر", items: ["بستنی شکلات"] },
+    { cat: "ترشیجات و رب", items: ["رب", "ماکارونی", "ترشی", "خیارشور", "زیتون"] },
+    { cat: "نوشیدنی گرم", items: ["چای", "نسکافه", "قهوه", "مولتی کافه"] },
+    { cat: "کنسرو", items: ["تن ماهی", "انواع کنسرو"] }
+  ];
+
+  const ALL = "همه";
+  const listEl = document.getElementById("list");
+  const catsEl = document.getElementById("cats");
+  const searchEl = document.getElementById("search");
+  let activeCat = ALL;
+
+  document.getElementById("orderBtn").href = ORDER_LINK;
+
+  function renderCats() {
+    const names = [ALL, ...DATA.map(g => g.cat)];
+    catsEl.innerHTML = "";
+    names.forEach(name => {
+      const b = document.createElement("button");
+      b.textContent = name;
+      if (name === activeCat) b.classList.add("active");
+      b.onclick = () => { activeCat = name; renderCats(); render(); };
+      catsEl.appendChild(b);
+    });
+  }
+
+  function render() {
+    const q = searchEl.value.trim();
+    listEl.innerHTML = "";
+    DATA.forEach(group => {
+      if (activeCat !== ALL && group.cat !== activeCat) return;
+      const items = group.items.filter(name => !q || name.includes(q));
+      if (items.length === 0) return;
+
+      const sec = document.createElement("section");
+      sec.className = "group";
+      sec.innerHTML = `<h2>${group.cat}</h2>`;
+      const grid = document.createElement("div");
+      grid.className = "grid";
+      items.forEach(name => {
+        const d = document.createElement("div");
+        d.className = "item";
+        d.innerHTML = `${name}<span class="price">قیمت به زودی</span>`;
+        grid.appendChild(d);
+      });
+      sec.appendChild(grid);
+      listEl.appendChild(sec);
+    });
+
+    if (!listEl.children.length) {
+      listEl.innerHTML = `<div class="note">محصولی پیدا نشد.</div>`;
+    } else if (!q && activeCat === ALL) {
+      listEl.innerHTML += `<div class="note">و هزاران آیتم دیگر. برای سفارش، با ما تماس بگیرید.</div>`;
+    }
+  }
+
+  searchEl.addEventListener("input", render);
+  renderCats();
+  render();
+</script>
+
+</body>
+</html>
